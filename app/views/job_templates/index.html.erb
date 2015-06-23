@@ -1,0 +1,27 @@
+<h<% @page_title = "Job Templates" %>
+
+<div class="jobtemplates index">
+  <h2>Job Templates </h2>
+
+  <%= link_to("Add New Subject", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Job Templates">
+    <tr class="header">
+      <th>Job Template Name</th>
+      <th>Job Type</th>
+      <th>Job Description</th>
+    </tr>
+    <% @jobtemplates.each do |template| %>
+    <tr>
+      <td><%= template.template_name %></td>
+      <td><%= template.job_type %></td>
+      <td><%= template.job_description %></td>     
+      <td class="actions">
+        <%= link_to("Show", {:action => 'show', :id => template.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => template.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => template.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

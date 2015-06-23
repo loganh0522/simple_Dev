@@ -1,0 +1,26 @@
+<div class="Job Template Edit">
+  <h2>Update Job Templatet</h2>
+
+    <%= form_for(:jobtemplate, :url => {:action => 'update', :id => @jobtemplate.id}) do |f| %>
+
+    <table summary="Subject form fields">
+      <tr>
+        <th><%= f.label(:template_name)%></th>
+        <td><%= f.text_field(:template_name) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:job_description)%></th>
+        <td><%= f.text_field(:job_description) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:job_type)%></th>
+        <td><%= f.text_field(:job_type) %></td>
+      </tr>
+  	</table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Updar Template") %>
+    </div>
+
+  <% end %>
+</div>

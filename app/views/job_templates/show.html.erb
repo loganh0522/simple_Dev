@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="Job Template show">
+  <h2>Job Template - <%= @jobtemplate.template_name %> </h2>
+
+  <table summary="Subject detail view">
+    <tr>
+      <th>Description</th>
+      <td><%= @jobtemplate.job_description %></td>
+    </tr>
+    <tr>
+      <th>Job Type</th>
+      <td><%= @jobtemplate.job_type %></td>
+    </tr>
+  </table>
+
+</div>

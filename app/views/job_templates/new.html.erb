@@ -1,0 +1,27 @@
+
+<div class="subjects new">
+  <h2>Create Job Template</h2>
+
+  <%= form_for(:jobtemplate, :url => {:action => 'create'}) do |f| %>
+
+    <table summary="Subject form fields">
+      <tr>
+        <th><%= f.label(:template_name)%></th>
+        <td><%= f.text_field(:template_name) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:job_description)%></th>
+        <td><%= f.text_field(:job_description) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:job_type)%></th>
+        <td><%= f.text_field(:job_type) %></td>
+      </tr>
+  	</table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Template") %>
+    </div>
+
+  <% end %>
+</div>
